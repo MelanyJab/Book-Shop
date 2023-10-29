@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>The Book Shop</title>
+
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <style>
+      section {
+        padding: 60px 0;
+      }
+    </style>
+  </head>
+
+  <body style="background: linear-gradient(to bottom right, #ff9999, #66ccff)">
+    <!--Nav Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent shadow-lg">
+      <div class="container-fluid">
+        <a
+          class="navbar-brand display-1 fw-bold"
+          href="#"
+          style="font-size: 30px">
+          <!--Logo image-->
+          <img
+            src="Images/logo (2).png"
+            alt=""
+            width="70"
+            height="65"
+            class="d-inline-block align-text-"
+            style="border-radius: 50%" />
+          Home
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+
+            <a class="nav-link fw-bold" href="BestSellers.html">Best Sellers</a>
+
+            <a
+              class="nav-link fw-bold"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              >Whishlist</a
+            >
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      You need to log in first!
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Sign up or log in to create your Whishlist
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal">
+                      Close
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop">
+                      Log in
+                    </button>
+                    <div
+                      class="modal fade"
+                      id="staticBackdrop"
+                      data-bs-backdrop="static"
+                      data-bs-keyboard="false"
+                      tabindex="-1"
+                      aria-labelledby="staticBackdropLabel"
+                      aria-hidden="true">
+                      <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">
+                              Sign up and join Us!
+                            </h5>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <p class="lead text-muted">
+                              "Unlock a world of exclusive deals and
+                              personalized experiences by logging in. Join us to
+                              delve into a tailored bookish journey just for
+                              you!"
+                            </p>
+                            <form class="row g-3 p-5">
+                              <div class="col-md-4">
+                                <label
+                                  for="validationCustom05"
+                                  class="form-label"
+                                  >First name</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="validationCustom05"
+                                  placeholder="First Name"
+                                  required />
+                                <div class="valid-feedback">Looks good!</div>
+                              </div>
+                              <div class="col-md-4">
+                                <label
+                                  for="validationCustom06"
+                                  class="form-label"
+                                  >Last name</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="validationCustom06"
+                                  placeholder="Last Name"
+                                  required />
+                                <div class="valid-feedback">Looks good!</div>
+                              </div>
+                              <div class="col-md-4">
+                                <label
+                                  for="validationCustomUsername3"
+                                  class="form-label"
+                                  >Username</label
+                                >
+                                <div class="input-group has-validation">
+                                  <span
+                                    class="input-group-text"
+                                    id="inputGroupPrepend3"
+                                    >@</span
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="validationCustomUsername3"
+                                    aria-describedby="inputGroupPrepend"
+                                    required />
+                                  <div class="invalid-feedback">
+                                    Please choose a username.
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <label for="inputEmail4" class="form-label"
+                                  >Email</label
+                                >
+                                <input
+                                  type="email"
+                                  class="form-control"
+                                  id="inputEmail4" />
+                              </div>
+                              <div class="col-md-6">
+                                <label for="inputPassword4" class="form-label"
+                                  >Password</label
+                                >
+                                <input
+                                  type="password"
+                                  class="form-control"
+                                  id="inputPassword4" />
+                              </div>
+                              <div class="col-12">
+                                <label for="inputAddress" class="form-label"
+                                  >Address</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="inputAddress"
+                                  placeholder="1234 Main St" />
+                              </div>
+                              <div class="col-12">
+                                <label for="inputAddress2" class="form-label"
+                                  >Address 2</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="inputAddress2"
+                                  placeholder="Apartment, studio, or floor" />
+                              </div>
+                              <div class="col-md-6">
+                                <label for="inputCity" class="form-label"
+                                  >City</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="inputCity" />
+                              </div>
+                              <div class="col-md-4">
+                                <label for="inputState" class="form-label"
+                                  >Country</label
+                                >
+                                <select id="inputState" class="form-select">
+                                  <option selected>Choose...</option>
+                                  <option>Lebanon</option>
+                                  <option>France</option>
+                                </select>
+                              </div>
+                              <div class="col-md-2">
+                                <label for="inputZip" class="form-label"
+                                  >Zip</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="inputZip" />
+                              </div>
+
+                              <div class="col-12">
+                                <button type="submit" class="btn btn-primary">
+                                  Sign up
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button
+                              type="button"
+                              class="btn btn-secondary"
+                              data-bs-dismiss="modal">
+                              Close
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a
+              class="nav-link fw-bold"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal2"
+              >My Cart</a
+            >
+            <div
+              class="modal fade"
+              id="exampleModal2"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      You need to log in first!
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Sign up or log in to make your purchase
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal">
+                      Close
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop2">
+                      Log in
+                    </button>
+                    <div
+                      class="modal fade"
+                      id="staticBackdrop2"
+                      data-bs-backdrop="static"
+                      data-bs-keyboard="false"
+                      tabindex="-1"
+                      aria-labelledby="staticBackdropLabel"
+                      aria-hidden="true">
+                      <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel2">
+                              Sign up and join Us!
+                            </h5>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <p class="lead text-muted">
+                              "Unlock a world of exclusive deals and
+                              personalized experiences by logging in. Join us to
+                              delve into a tailored bookish journey just for
+                              you!"
+                            </p>
+                            <form class="row g-3 p-5">
+                              <div class="col-md-4">
+                                <label
+                                  for="validationCustom07"
+                                  class="form-label"
+                                  >First name</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="validationCustom07"
+                                  placeholder="First Name"
+                                  required />
+                                <div class="valid-feedback">Looks good!</div>
+                              </div>
+                              <div class="col-md-4">
+                                <label
+                                  for="validationCustom08"
+                                  class="form-label"
+                                  >Last name</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="validationCustom08"
+                                  placeholder="Last Name"
+                                  required />
+                                <div class="valid-feedback">Looks good!</div>
+                              </div>
+                              <div class="col-md-4">
+                                <label
+                                  for="validationCustomUsername4"
+                                  class="form-label"
+                                  >Username</label
+                                >
+                                <div class="input-group has-validation">
+                                  <span
+                                    class="input-group-text"
+                                    id="inputGroupPrepend4"
+                                    >@</span
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="validationCustomUsername4"
+                                    aria-describedby="inputGroupPrepend"
+                                    required />
+                                  <div class="invalid-feedback">
+                                    Please choose a username.
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <label for="inputEmail4" class="form-label"
+                                  >Email</label
+                                >
+                                <input
+                                  type="email"
+                                  class="form-control"
+                                  id="inputEmail3" />
+                              </div>
+                              <div class="col-md-6">
+                                <label for="inputPassword4" class="form-label"
+                                  >Password</label
+                                >
+                                <input
+                                  type="password"
+                                  class="form-control"
+                                  id="inputPassword3" />
+                              </div>
+                              <div class="col-12">
+                                <label for="inputAddress" class="form-label"
+                                  >Address</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="inputAddress1"
+                                  placeholder="1234 Main St" />
+                              </div>
+                              <div class="col-12">
+                                <label for="inputAddress2" class="form-label"
+                                  >Address 2</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="inputAddress3"
+                                  placeholder="Apartment, studio, or floor" />
+                              </div>
+                              <div class="col-md-6">
+                                <label for="inputCity" class="form-label"
+                                  >City</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="inputCity1" />
+                              </div>
+                              <div class="col-md-4">
+                                <label for="inputState" class="form-label"
+                                  >Country</label
+                                >
+                                <select id="inputState1" class="form-select">
+                                  <option selected>Choose...</option>
+                                  <option>Lebanon</option>
+                                  <option>France</option>
+                                </select>
+                              </div>
+                              <div class="col-md-2">
+                                <label for="inputZip1" class="form-label"
+                                  >Zip</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="inputZip1" />
+                              </div>
+
+                              <div class="col-12">
+                                <button type="submit" class="btn btn-primary">
+                                  Sign up
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button
+                              type="button"
+                              class="btn btn-secondary"
+                              data-bs-dismiss="modal">
+                              Close
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle fw-bold"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                My Account
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="SignUp.html">Sign in</a></li>
+                <li><a class="dropdown-item" href="#">Add coupons</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="SignUp.html">Sign up!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2 border-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search" />
+            <button class="btn btn-outline-primary me-2" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="card mb-3 mt-3 border-0 bg-transparent">
+      <div class="row g-0">
+        <div class="col-md-7">
+          <img
+            src="Images/cover1.jpg"
+            class="img-fluid rounded-start"
+            alt="..." />
+        </div>
+        <div class="col-md-5">
+          <div class="card-body bg-transparent">
+            <h1 class="card-title display-5 text-white">
+              Welcome to our website
+            </h1>
+            <p class="card-text text-white">
+              "Welcome book lovers! Explore our collection of original,
+              captivating reads just waiting to transport you to new worlds.
+              Happy reading!"
+            </p>
+            <p class="text-white fs-5 fw-light">
+              <i class="fs-2 bi bi-globe-americas me-2"></i> We deliver around
+              the world
+            </p>
+          </div>
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item bg-transparent border-white m-2">
+              <h2 class="accordion-header bg-transparent" id="headingTwo">
+                <button
+                  class="accordion-button fs-3 text-white display-6 collapsed bg-transparent"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo">
+                  About Us
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body text-white">
+                  <strong>Each Book</strong> is a genuine original sourced from
+                  reputable suppliers. Embrace the assurance of the finest
+                  security measures for all your purchases on our website. Enjoy
+                  swift and efficient deliveries , ensuring your books arrive at
+                  your doorstep with exceptional speed. Explore our collection,
+                  where quality, security, and prompt service converge to offer
+                  you an unparalleled reading experience.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-grid gap-2 m-2">
+            <a
+              class="btn btn-outline-light display-1 fs-3"
+              role="button"
+              type="button"
+              href="SignUp.html"
+              >Sign Up!</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!--First section-->
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        </div>
+
+        <section id="New" class="mt-5 shadow-lg pb-5">
+          <div class="container-lg">
+            <div class="text-center text-white">
+              <h2><i class="bi bi-stars pb-2"></i>New Releases</h2>
+              <p class="lead text-white">
+                "Discover the latest literary treasures on our shelves!"
+              </p>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-4">
+                  <div class="col">
+                    <div class="card h-100">
+                      <img
+                        src="Images/hello B.png"
+                        class="card-img-top h-75"
+                        alt="Hello Beautiful" />
+                      <div class="card-body">
+                        <h5 class="card-title text-center text-capitalize">
+                          Hello Beautiful
+                        </h5>
+                        <p class="card-text text-danger text-center">70$</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img
+                        src="Images/hell bent.png"
+                        class="card-img-top h-75"
+                        alt="Hell Bent" />
+                      <div class="card-body">
+                        <h5 class="card-title text-center text-capitalize">
+                          Hell Bent
+                        </h5>
+                        <p class="card-text text-danger text-center">65$</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img
+                        src="Images/yellow face.png"
+                        class="card-img-top h-75"
+                        alt="Yellow face" />
+                      <div class="card-body">
+                        <h5 class="card-title text-center text-capitalize">
+                          Yellow face
+                        </h5>
+                        <p class="card-text text-center text-danger">58$</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img
+                        src="Images/Spare.png"
+                        class="card-img-top h-75"
+                        alt="Spare" />
+                      <div class="card-body">
+                        <h5 class="card-title text-center text-capitalize">
+                          Spare
+                        </h5>
+                        <p class="card-text text-center text-danger">80$</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-4">
+                  <div class="col">
+                    <div class="card h-100">
+                      <img
+                        src="Images/ItStartsWithUs.png"
+                        class="card-img-top h-75"
+                        alt="It starts with us" />
+                      <div class="card-body">
+                        <h5 class="card-title text-center text-capitalize">
+                          It starts with us
+                        </h5>
+                        <p class="card-text text-danger text-center">50$</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img
+                        src="Images/TwistedLove.png"
+                        class="card-img-top h-75"
+                        alt="Twisted Love" />
+                      <div class="card-body">
+                        <h5 class="card-title text-center text-capitalize">
+                          Twisted Love
+                        </h5>
+                        <p class="card-text text-danger text-center">55$</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img
+                        src="Images/KingOfWrath.png"
+                        class="card-img-top h-75"
+                        alt="King of Wrath" />
+                      <div class="card-body">
+                        <h5 class="card-title text-center text-capitalize">
+                          King of wrath
+                        </h5>
+                        <p class="card-text text-center text-danger">60$</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img
+                        src="Images/igniteMe.png"
+                        class="card-img-top h-75"
+                        alt="Ignite Me" />
+                      <div class="card-body">
+                        <h5 class="card-title text-center text-capitalize">
+                          Ignite me
+                        </h5>
+                        <p class="card-text text-center text-danger">47$</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!--Second Section-->
+      <div
+        id="carouselExampleIndicators2"
+        class="carousel slide"
+        data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators2"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators2"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        </div>
+        <section id="New" class="mt-5 shadow-lg pb-5">
+          <div class="container-lg">
+            <div class="text-center text-white">
+              <h2><i class="bi bi-hearts me-2"></i>Best Sellers</h2>
+              <p class="lead text-white">
+                "Check out our bestsellers – the book everyone's talking about!"
+              </p>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-3 g-4">
+                  <div class="col">
+                    <div class="card h-100">
+                      <img
+                        src="Images/book1.png"
+                        class="card-img-top h-75"
+                        alt="The 48 Laws of Power" />
+                      <div class="card-body">
+                        <h5 class="card-title text-center text-capitalize">
+                          the 48 laws of power
+                        </h5>
+                        <p class="card-text text-danger text-center">20$</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img
+                        src="Images/front2.png"
+                        class="card-img-top h-75"
+                        alt="The Mountain is you" />
+                      <div class="card-body">
+                        <h5 class="card-title text-center text-capitalize">
+                          The mountain is you
+                        </h5>
+                        <p class="card-text text-danger text-center">30$</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img
+                        src="Images/book3.png"
+                        class="card-img-top h-75"
+                        alt="the seven husbdand of evelyn hugo" />
+                      <div class="card-body">
+                        <h5 class="card-title text-center text-capitalize">
+                          The seven husbands of evelyn hugo
+                        </h5>
+                        <p class="card-text text-center text-danger">40$</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators2"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators2"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Third Section -->
+      <section id="season" class="mt-5 shadow-lg">
+        <div class="container-lg">
+          <div class="text-center text-white">
+            <h2>
+              <i class="bi bi-emoji-surprise-fill fs-4 me-2"></i>Spooky Time
+            </h2>
+            <p class="lead text-white">
+              "Get ready to embrace the spine-tingling chills of the season with
+              our Spooky Time section!"
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--Fourth Section-->
+      <section id="season" class="mt-5 shadow-lg">
+        <div class="container-lg">
+          <div class="text-center text-white">
+            <h2>Book Series</h2>
+            <p class="lead text-white">
+              "Explore interconnected worlds and stories that continue to unfold
+              across multiple volumes"
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--More Sections-->
+
+      <!--Footer-->
+      <footer class="footer mt-5 py-3 bg-transparent shadow-lg">
+        <div class="container mb-0 text-white text-start">
+          <div class="row">
+            <div class="col">
+              <h4 class="mb-2">Visit us or Reach out on:</h4>
+
+              <span
+                ><i class="bi bi-instagram me-2"></i
+                ><a href="#" class="link-primary">@BookShopInsta</a></span
+              >
+              <br />
+              <span
+                ><i class="bi bi-facebook me-2"></i
+                ><a href="#" class="link-primary">BookShopFacebook</a></span
+              >
+              <br />
+              <span
+                ><i class="bi bi-envelope-at-fill me-2"></i>For customer service
+                and help email us on:
+                <a href="#" class="link-primary">OurBookShop@gmail.com</a></span
+              >
+            </div>
+            <div class="col border-start">
+              <h4 class="mb-2">More Info here:</h4>
+              <p class="fw-lighter">
+                more info about your bookshop can go here
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    </div>
+  </body>
+</html>

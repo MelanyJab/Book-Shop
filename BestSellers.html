@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Best Sellers</title>
+
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  </head>
+
+  <body style="background: linear-gradient(to bottom right, #ff9999, #66ccff)">
+    <div class="overflow-visible">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent shadow-lg">
+        <div class="container-fluid">
+          <a
+            class="navbar-brand display-1 fw-bold"
+            href="#"
+            style="font-size: 30px">
+            <!--Logo image-->
+            <img
+              src="Images/logo (2).png"
+              alt=""
+              width="70"
+              height="65"
+              class="d-inline-block align-text-"
+              style="border-radius: 50%" />
+            Best Sellers
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active fw-bold" aria-current="page" href="#"
+                  >Best Sellers</a
+                >
+              </li>
+
+              <a class="nav-link fw-bold" href="index.html">Home</a>
+
+              <a
+                class="nav-link fw-bold"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Whishlist</a
+              >
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        You need to log in first!
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Sign up or log in to create your Whishlist
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                        Close
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Log in
+                      </button>
+                      <div
+                        class="modal fade"
+                        id="staticBackdrop"
+                        data-bs-backdrop="static"
+                        data-bs-keyboard="false"
+                        tabindex="-1"
+                        aria-labelledby="staticBackdropLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-fullscreen">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="staticBackdropLabel">
+                                Sign up and join Us!
+                              </h5>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body needs-validation" novalidate>
+                              <p class="lead text-muted">
+                                "Unlock a world of exclusive deals and
+                                personalized experiences by logging in. Join us
+                                to delve into a tailored bookish journey just
+                                for you!"
+                              </p>
+                              <form class="row g-3 p-5">
+                                <div class="col-md-4">
+                                  <label
+                                    for="validationCustom01"
+                                    class="form-label"
+                                    >First name</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="validationCustom01"
+                                    placeholder="First Name"
+                                    required />
+                                  <div class="valid-feedback">Looks good!</div>
+                                </div>
+                                <div class="col-md-4">
+                                  <label
+                                    for="validationCustom02"
+                                    class="form-label"
+                                    >Last name</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="validationCustom02"
+                                    placeholder="Last Name"
+                                    required />
+                                  <div class="valid-feedback">Looks good!</div>
+                                </div>
+                                <div class="col-md-4">
+                                  <label
+                                    for="validationCustomUsername1"
+                                    class="form-label"
+                                    >Username</label
+                                  >
+                                  <div class="input-group has-validation">
+                                    <span
+                                      class="input-group-text"
+                                      id="inputGroupPrepend1"
+                                      >@</span
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="validationCustomUsername1"
+                                      aria-describedby="inputGroupPrepend"
+                                      required />
+                                    <div class="invalid-feedback">
+                                      Please choose a username.
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <label
+                                    for="exampleFormControlInput1"
+                                    class="form-label"
+                                    >Email address</label
+                                  >
+                                  <input
+                                    type="email"
+                                    class="form-control"
+                                    id="exampleFormControlInput1"
+                                    placeholder="name@example.com" />
+                                </div>
+                                <div class="col-md-6">
+                                  <label for="inputPassword4" class="form-label"
+                                    >Password</label
+                                  >
+                                  <input
+                                    type="password"
+                                    class="form-control"
+                                    id="inputPassword4" />
+                                </div>
+                                <div class="col-12">
+                                  <label for="inputAddress" class="form-label"
+                                    >Address</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="inputAddress"
+                                    placeholder="1234 Main St" />
+                                </div>
+                                <div class="col-12">
+                                  <label for="inputAddress2" class="form-label"
+                                    >Address 2</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="inputAddress2"
+                                    placeholder="Apartment, studio, or floor" />
+                                </div>
+                                <div class="col-md-6">
+                                  <label for="inputCity" class="form-label"
+                                    >City</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="inputCity" />
+                                </div>
+                                <div class="col-md-4">
+                                  <label for="inputState" class="form-label"
+                                    >Country</label
+                                  >
+                                  <select id="inputState" class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                    <option>Lebanon</option>
+                                    <option>France</option>
+                                  </select>
+                                </div>
+                                <div class="col-md-2">
+                                  <label for="inputZip" class="form-label"
+                                    >Zip</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="inputZip" />
+                                </div>
+
+                                <div class="col-12">
+                                  <button type="submit" class="btn btn-primary">
+                                    Sign up
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-bs-dismiss="modal">
+                                Close
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a
+                class="nav-link fw-bold"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal2"
+                >My Cart</a
+              >
+              <div
+                class="modal fade"
+                id="exampleModal2"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        You need to log in first!
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Sign up or log in to make your purchase
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                        Close
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop2">
+                        Log in
+                      </button>
+                      <div
+                        class="modal fade"
+                        id="staticBackdrop2"
+                        data-bs-backdrop="static"
+                        data-bs-keyboard="false"
+                        tabindex="-1"
+                        aria-labelledby="staticBackdropLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-fullscreen">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="staticBackdropLabel2">
+                                Sign up and join Us!
+                              </h5>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <p class="lead text-muted">
+                                "Unlock a world of exclusive deals and
+                                personalized experiences by logging in. Join us
+                                to delve into a tailored bookish journey just
+                                for you!"
+                              </p>
+                              <form class="row g-3 p-5">
+                                <div class="col-md-4">
+                                  <label
+                                    for="validationCustom03"
+                                    class="form-label"
+                                    >First name</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="validationCustom03"
+                                    placeholder="First Name"
+                                    required />
+                                  <div class="valid-feedback">Looks good!</div>
+                                </div>
+                                <div class="col-md-4">
+                                  <label
+                                    for="validationCustom04"
+                                    class="form-label"
+                                    >Last name</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="validationCustom04"
+                                    placeholder="Last Name"
+                                    required />
+                                  <div class="valid-feedback">Looks good!</div>
+                                </div>
+                                <div class="col-md-4">
+                                  <label
+                                    for="validationCustomUsername2"
+                                    class="form-label"
+                                    >Username</label
+                                  >
+                                  <div class="input-group has-validation">
+                                    <span
+                                      class="input-group-text"
+                                      id="inputGroupPrepend2"
+                                      >@</span
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="validationCustomUsername2"
+                                      aria-describedby="inputGroupPrepend"
+                                      required />
+                                    <div class="invalid-feedback">
+                                      Please choose a username.
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <label for="inputEmail4" class="form-label"
+                                    >Email</label
+                                  >
+                                  <input
+                                    type="email"
+                                    class="form-control"
+                                    id="inputEmail3" />
+                                </div>
+                                <div class="col-md-6">
+                                  <label for="inputPassword4" class="form-label"
+                                    >Password</label
+                                  >
+                                  <input
+                                    type="password"
+                                    class="form-control"
+                                    id="inputPassword3" />
+                                </div>
+                                <div class="col-12">
+                                  <label for="inputAddress" class="form-label"
+                                    >Address</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="inputAddress1"
+                                    placeholder="1234 Main St" />
+                                </div>
+                                <div class="col-12">
+                                  <label for="inputAddress2" class="form-label"
+                                    >Address 2</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="inputAddress3"
+                                    placeholder="Apartment, studio, or floor" />
+                                </div>
+                                <div class="col-md-6">
+                                  <label for="inputCity" class="form-label"
+                                    >City</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="inputCity1" />
+                                </div>
+                                <div class="col-md-4">
+                                  <label for="inputState" class="form-label"
+                                    >Country</label
+                                  >
+                                  <select id="inputState1" class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                    <option>Lebanon</option>
+                                    <option>France</option>
+                                  </select>
+                                </div>
+                                <div class="col-md-2">
+                                  <label for="inputZip1" class="form-label"
+                                    >Zip</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="inputZip1" />
+                                </div>
+
+                                <div class="col-12">
+                                  <button type="submit" class="btn btn-primary">
+                                    Sign up
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-bs-dismiss="modal">
+                                Close
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle fw-bold"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  My Account
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="SignUp.html">Sign in</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Add coupons</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="SignUp.html">Sign up!</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search" />
+              <button class="btn btn-outline-primary me-2" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-lg">
+        <!--Row 1-->
+        <div class="row justify-content-center mt-5 m-3">
+          <figure class="shadow">
+            <h1 class="text-center text-white" style="font-size: 30px">
+              <span
+                class="badge rounded-pill"
+                style="color: white; background-color: #b8bde9"
+                >#1</span
+              >
+              The 48 Laws Of Power
+              <figcaption
+                class="blockquote-footer text-center mt-2 mb-0"
+                style="font-size: 13px">
+                <cite title="Source Title">by Robert Greene</cite>
+              </figcaption>
+            </h1>
+          </figure>
+          <!--Column 1-->
+          <div class="col-md-5 text-center me-3 ms-3">
+            <div
+              id="carouselExampleIndicators"
+              class="carousel carousel-light slide"
+              data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="Images/book1.png"
+                    class="d-block w-100"
+                    alt="book" />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="Images/front.png"
+                    class="d-block w-100"
+                    alt="front" />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="Images/back-removebg-preview.png"
+                    class="d-block w-100"
+                    alt="back" />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <div
+              class="d-flex justify-content-center align-items-center bg-transparent">
+              <h2 class="text-white fw-bold m-4 text-center">$33</h2>
+
+              <div
+                class="btn-group"
+                role="group"
+                aria-label="Basic outlined example">
+                <!-- Button trigger modal -->
+                <button
+                  type="button"
+                  class="btn me-2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal2"
+                  style="
+                    width: 100px;
+                    color: #ff0095;
+                    border-color: #ff0095;
+                    border-width: 1px;
+                  ">
+                  Add to Cart
+                </button>
+                <button
+                  type="button"
+                  class="btn"
+                  style="
+                    color: #ffffff;
+                    border-color: #ffffff;
+                    border-width: 1px;
+                  ">
+                  Whishlist
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!--Column 2-->
+          <div class="col-md-5 text-start text-md-start shadow-lg">
+            <h3 class="m-2 text-white">
+              Description:
+              <small class="text-white m-3" style="font-weight: 300">
+                The 48 Laws of Power by Robert Greene is a self-help book
+                offering advice on how to gain and maintain power, using lessons
+                drawn from parables and the experiences of historical figures.
+                Power depends on the relationships between a person and those he
+                or she seeks to control.
+              </small>
+            </h3>
+
+            <h3 class="m-2 text-white">
+              Rating:
+              <small
+                class="text-white m-2 ps-3 pe-3 rounded-pill border border-2"
+                style="font-weight: 300">
+                4.2/5
+              </small>
+            </h3>
+            <h3 class="m-2 mt-4 text-white">Genres:</h3>
+            <div class="row">
+              <div class="col">
+                <div
+                  class="m-2 p-3 border-start border-success border-5 text-white">
+                  Self-help book
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <!--Row 2-->
+        <div class="row justify-content-center m-3">
+          <figure class="shadow">
+            <h1 class="text-center text-white" style="font-size: 30px">
+              <span
+                class="badge rounded-pill"
+                style="color: white; background-color: #b8bde9"
+                >#2</span
+              >
+              The Mountain is You
+              <figcaption
+                class="blockquote-footer text-center mt-2 mb-0"
+                style="font-size: 13px">
+                <cite title="Source Title">by Brianna Wiest</cite>
+              </figcaption>
+            </h1>
+          </figure>
+          <!--Column 1-->
+          <div class="col-md-5 text-center me-3 ms-3">
+            <img src="Images/front2.png" class="d-block w-100" alt="front" />
+            <div class="d-flex justify-content-center align-items-center p-2">
+              <h2 class="text-white fw-bold m-4 text-center">$30</h2>
+              <div
+                class="btn-group"
+                role="group"
+                aria-label="Basic outlined example">
+                <!-- Button trigger modal -->
+                <button
+                  type="button"
+                  class="btn me-2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal2"
+                  style="
+                    width: 100px;
+                    color: #ff0095;
+                    border-color: #ff0095;
+                    border-width: 1px;
+                  ">
+                  Add to Cart
+                </button>
+                <button
+                  type="button"
+                  class="btn"
+                  style="
+                    color: #ffffff;
+                    border-color: #ffffff;
+                    border-width: 1px;
+                  ">
+                  Whishlist
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!--Column 2-->
+          <div class="col-md-5 text-start text-md-start text-white shadow-lg">
+            <h3 class="m-2">
+              Description:
+              <small class="text-white m-3" style="font-weight: 300">
+                This is a book about self-sabotage. Why we do it, when we do it,
+                and how to stop doing it—for good. Coexisting but conflicting
+                needs create self-sabotaging behaviors. This is why we resist
+                efforts to change, often until they feel completely futile.
+              </small>
+            </h3>
+
+            <h3 class="m-2 text-white">
+              Rating:
+              <small
+                class="text-white m-2 ps-3 pe-3 rounded-pill border border-2"
+                style="font-weight: 300">
+                4.1/5
+              </small>
+            </h3>
+            <h3 class="m-2 mt-4 text-white">Genres:</h3>
+            <div class="row">
+              <div class="col">
+                <div
+                  class="m-2 p-3 border-start border-success border-5 text-white">
+                  Self-help book
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <!--Row 3-->
+        <div class="row justify-content-center m-3">
+          <figure class="shadow">
+            <h1 class="text-center text-white" style="font-size: 30px">
+              <span
+                class="badge rounded-pill"
+                style="color: white; background-color: #b8bde9"
+                >#3</span
+              >
+              The Seven Husbands of Evelyn Hugo
+              <figcaption
+                class="blockquote-footer text-center mt-2 mb-0"
+                style="font-size: 13px">
+                <cite title="Source Title">by Taylor Jenkins Reid</cite>
+              </figcaption>
+            </h1>
+          </figure>
+          <!--Column 1-->
+          <div class="col-md-5 text-center me-3 ms-3">
+            <div
+              id="carouselExampleIndicators3"
+              class="carousel carousel-light slide"
+              data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators3"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators3"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="Images/book3.png"
+                    class="d-block w-100"
+                    alt="book" />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="Images/back3.png"
+                    class="d-block w-100"
+                    alt="back" />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators3"
+                data-bs-slide="prev">
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators3"
+                data-bs-slide="next">
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center p-2">
+              <h2 class="text-white fw-bold m-4 text-center">$40</h2>
+
+              <div
+                class="btn-group"
+                role="group"
+                aria-label="Basic outlined example">
+                <!-- Button trigger modal -->
+                <button
+                  type="button"
+                  class="btn me-2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal2"
+                  style="
+                    width: 100px;
+                    color: #ff0095;
+                    border-color: #ff0095;
+                    border-width: 1px;
+                  ">
+                  Add to Cart
+                </button>
+                <button
+                  type="button"
+                  class="btn"
+                  style="
+                    color: #ffffff;
+                    border-color: #ffffff;
+                    border-width: 1px;
+                  ">
+                  Whishlist
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!--Column 2-->
+          <div class="col-md-5 text-start text-md-start shadow-lg">
+            <h3 class="m-2 text-white">
+              Description:
+              <small class="text-white m-3" style="font-weight: 300">
+                The Seven Husbands of Evelyn Hugo tells the story of old
+                Hollywood actor Evelyn Hugo, determined to secure an A-List spot
+                in the industry by doing whatever it takes to get there. While
+                attempting to complete her rise to stardom, she marries seven
+                husbands and outlives them all.
+              </small>
+            </h3>
+
+            <h3 class="m-2 text-white">
+              Rating:
+              <small
+                class="text-white m-2 ps-3 pe-3 rounded-pill border border-2"
+                style="font-weight: 300">
+                4.4/5
+              </small>
+            </h3>
+            <h3 class="m-2 mt-4 text-white">Genres:</h3>
+            <div class="row">
+              <div class="col">
+                <div
+                  class="m-2 p-3 border-start border-danger border-5 text-white">
+                  Romance
+                </div>
+                <div
+                  class="m-2 p-3 border-start border-primary border-5 text-white">
+                  Historical-Fiction
+                </div>
+                <div
+                  class="m-2 p-3 border-start border-dark border-5 text-white">
+                  Psychological Fiction
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled me-2">
+            <a
+              class="page-link bg-transparent"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >Previous</a
+            >
+          </li>
+          <li class="page-item me-2">
+            <a class="page-link bg-transparent" href="#">1</a>
+          </li>
+          <li class="page-item me-2">
+            <a class="page-link bg-transparent" href="#">2</a>
+          </li>
+          <li class="page-item me-2">
+            <a class="page-link bg-transparent" href="#">3</a>
+          </li>
+          <li class="page-item me-2">
+            <a class="page-link bg-transparent me-2" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!--Footer-->
+    <footer class="footer mt-5 py-3 bg-transparent shadow-lg">
+      <div class="container mb-0 text-white text-start">
+        <div class="row">
+          <div class="col">
+            <h4 class="mb-2">Visit us or Reach out on:</h4>
+
+            <span
+              ><i class="bi bi-instagram me-2"></i
+              ><a href="#" class="link-primary">@BookShopInsta</a></span
+            >
+            <br />
+            <span
+              ><i class="bi bi-facebook me-2"></i
+              ><a href="#" class="link-primary">BookShopFacebook</a></span
+            >
+            <br />
+            <span
+              ><i class="bi bi-envelope-at-fill me-2"></i>For customer service
+              and help email us on:
+              <a href="#" class="link-primary">OurBookShop@gmail.com</a></span
+            >
+          </div>
+          <div class="col border-start">
+            <h4 class="mb-2">More Info here:</h4>
+            <p class="fw-lighter">more info about your bookshop can go here</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
