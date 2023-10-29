@@ -48,18 +48,34 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active fw-bold" aria-current="page" href="#"
+                <a
+                  class="nav-link active fw-bold"
+                  aria-current="page"
+                  href="#"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Best sellers page"
                   >Best Sellers</a
                 >
               </li>
 
-              <a class="nav-link fw-bold" href="index.html">Home</a>
+              <a
+                class="nav-link fw-bold"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Home page"
+                href="index.html"
+                >Home</a
+              >
 
               <a
                 class="nav-link fw-bold"
                 href="#"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="view wishlist"
                 >Whishlist</a
               >
               <div
@@ -269,13 +285,18 @@
                   </div>
                 </div>
               </div>
-              <a
-                class="nav-link fw-bold"
-                href="#"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal2"
-                >My Cart</a
-              >
+              <span
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="view cart">
+                <a
+                  class="nav-link fw-bold"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal2"
+                  >My Cart</a
+                >
+              </span>
               <div
                 class="modal fade"
                 id="exampleModal2"
@@ -481,6 +502,235 @@
                 </div>
               </div>
 
+              <!-- Offcanvas -->
+              <div
+                class="offcanvas offcanvas-top"
+                tabindex="-1"
+                id="offcanvasTop"
+                aria-labelledby="offcanvasTopLabel">
+                <div class="offcanvas-header">
+                  <button
+                    type="button"
+                    class="btn-close text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="text-dark" role="presentation">
+                      <button
+                        class="nav-link text-dark active me-2"
+                        id="home-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#home"
+                        type="button"
+                        role="tab"
+                        aria-controls="home"
+                        aria-selected="true">
+                        Sign in
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link text-dark"
+                        id="profile-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#profile"
+                        type="button"
+                        role="tab"
+                        aria-controls="profile"
+                        aria-selected="false">
+                        Sign up
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="home"
+                      role="tabpanel"
+                      aria-labelledby="home-tab">
+                      <form class="px-4 py-3">
+                        <div class="mb-3">
+                          <label
+                            for="exampleDropdownFormEmail1"
+                            class="form-label"
+                            >Email address</label
+                          >
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="exampleDropdownFormEmail1"
+                            placeholder="email@example.com" />
+                        </div>
+                        <div class="mb-3">
+                          <label
+                            for="exampleDropdownFormPassword1"
+                            class="form-label"
+                            >Password</label
+                          >
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="exampleDropdownFormPassword1"
+                            placeholder="Password" />
+                        </div>
+                        <div class="mb-3">
+                          <div class="form-check">
+                            <input
+                              type="checkbox"
+                              class="form-check-input"
+                              id="dropdownCheck" />
+                            <label class="form-check-label" for="dropdownCheck">
+                              Remember me
+                            </label>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                          Sign in
+                        </button>
+                      </form>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="profile"
+                      role="tabpanel"
+                      aria-labelledby="profile-tab">
+                      <form class="row g-3 p-5">
+                        <div class="col-md-4">
+                          <label for="validationCustom07" class="form-label"
+                            >First name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="validationCustom07"
+                            placeholder="First Name"
+                            required />
+                          <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="col-md-4">
+                          <label for="validationCustom08" class="form-label"
+                            >Last name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="validationCustom08"
+                            placeholder="Last Name"
+                            required />
+                          <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="col-md-4">
+                          <label
+                            for="validationCustomUsername7"
+                            class="form-label"
+                            >Username</label
+                          >
+                          <div class="input-group has-validation">
+                            <span
+                              class="input-group-text"
+                              id="inputGroupPrepend7"
+                              >@</span
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="validationCustomUsername7"
+                              aria-describedby="inputGroupPrepend"
+                              required />
+                            <div class="invalid-feedback">
+                              Please choose a username.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label
+                            for="exampleFormControlInput7"
+                            class="form-label"
+                            >Email address</label
+                          >
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="exampleFormControlInput7"
+                            placeholder="name@example.com" />
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputPassword7" class="form-label"
+                            >Password</label
+                          >
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="inputPassword1" />
+                        </div>
+                        <div class="col-12">
+                          <label for="inputAddress1" class="form-label"
+                            >Address</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="inputAddress2"
+                            placeholder="1234 Main St" />
+                        </div>
+                        <div class="col-12">
+                          <label for="inputAddress2" class="form-label"
+                            >Address 2</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="inputAddress7"
+                            placeholder="Apartment, studio, or floor" />
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputCity7" class="form-label"
+                            >City</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="inputCity7" />
+                        </div>
+                        <div class="col-md-4">
+                          <label for="inputState7" class="form-label"
+                            >Country</label
+                          >
+                          <select id="inputState7" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                            <option>Lebanon</option>
+                            <option>France</option>
+                          </select>
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputZip7" class="form-label">Zip</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="inputZip7" />
+                        </div>
+
+                        <div class="col-12">
+                          <button type="submit" class="btn btn-primary">
+                            Sign up
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="contact"
+                      role="tabpanel"
+                      aria-labelledby="contact-tab">
+                      ...
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle fw-bold"
@@ -493,7 +743,14 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a class="dropdown-item" href="SignUp.html">Sign in</a>
+                    <a
+                      id="signInLink"
+                      class="dropdown-item"
+                      href="#"
+                      id="navbarDropdown"
+                      aria-expanded="false"
+                      >Sign in</a
+                    >
                   </li>
                   <li><a class="dropdown-item" href="#">Add coupons</a></li>
                   <li>
@@ -506,10 +763,39 @@
               </li>
             </ul>
             <form class="d-flex">
+              <div class="dropdown">
+                <button
+                  class="btn bg-transparent text-white dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Filter
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Romance</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Self help</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Thriller</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">...</a>
+                  </li>
+                </ul>
+              </div>
               <input
-                class="form-control me-2"
+                class="form-control me-2 border-2"
                 type="search"
-                placeholder="Search"
+                placeholder="Book name, author, genres.."
                 aria-label="Search" />
               <button class="btn btn-outline-primary me-2" type="submit">
                 Search
@@ -970,5 +1256,16 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var signInLink = document.getElementById("signInLink");
+        signInLink.addEventListener("click", function () {
+          var offcanvasElement = new bootstrap.Offcanvas(
+            document.getElementById("offcanvasTop")
+          );
+          offcanvasElement.toggle();
+        });
+      });
+    </script>
   </body>
 </html>

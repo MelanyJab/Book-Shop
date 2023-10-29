@@ -53,20 +53,29 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active fw-bold" aria-current="page" href="#"
-                >Home</a
-              >
+              <span class="home" data-bs-placement="bottom" title="Home page">
+                <a class="nav-link active fw-bold" aria-current="page" href="#"
+                  >Home</a
+                >
+              </span>
             </li>
-
-            <a class="nav-link fw-bold" href="BestSellers.html">Best Sellers</a>
-
-            <a
-              class="nav-link fw-bold"
-              href="#"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              >Whishlist</a
-            >
+            <span
+              class="home"
+              data-bs-placement="bottom"
+              title="Best sellers page">
+              <a class="nav-link fw-bold" href="BestSellers.html"
+                >Best Sellers</a
+              >
+            </span>
+            <span class="home" data-bs-placement="bottom" title="view wishlist">
+              <a
+                class="nav-link fw-bold"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Whishlist</a
+              >
+            </span>
             <div
               class="modal fade"
               id="exampleModal"
@@ -270,13 +279,15 @@
                 </div>
               </div>
             </div>
-            <a
-              class="nav-link fw-bold"
-              href="#"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal2"
-              >My Cart</a
-            >
+            <span class="home" data-bs-placement="bottom" title="view cart">
+              <a
+                class="nav-link fw-bold"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal2"
+                >My Cart</a
+              >
+            </span>
             <div
               class="modal fade"
               id="exampleModal2"
@@ -295,9 +306,7 @@
                       data-bs-dismiss="modal"
                       aria-label="Close"></button>
                   </div>
-                  <div class="modal-body">
-                    Sign up or log in to make your purchase
-                  </div>
+                  <div class="modal-body">Sign up or log in to use a cart</div>
                   <div class="modal-footer">
                     <button
                       type="button"
@@ -392,7 +401,10 @@
                                 </div>
                               </div>
                               <div class="col-md-6">
-                                <label for="inputEmail4" class="form-label"
+                                <label
+                                  for="inputEmail4"
+                                  class="form-label"
+                                  placeholder="email@example.com"
                                   >Email</label
                                 >
                                 <input
@@ -480,6 +492,221 @@
                 </div>
               </div>
             </div>
+            <!-- Offcanvas -->
+            <div
+              class="offcanvas offcanvas-top"
+              tabindex="-1"
+              id="offcanvasTop"
+              aria-labelledby="offcanvasTopLabel">
+              <div class="offcanvas-header">
+                <button
+                  type="button"
+                  class="btn-close text-reset"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="text-dark" role="presentation">
+                    <button
+                      class="nav-link text-dark active me-2"
+                      id="home-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#home"
+                      type="button"
+                      role="tab"
+                      aria-controls="home"
+                      aria-selected="true">
+                      Sign in
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link text-dark"
+                      id="profile-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#profile"
+                      type="button"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false">
+                      Sign up
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="home"
+                    role="tabpanel"
+                    aria-labelledby="home-tab">
+                    <form class="px-4 py-3">
+                      <div class="mb-3">
+                        <label
+                          for="exampleDropdownFormEmail1"
+                          class="form-label"
+                          >Email address</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="exampleDropdownFormEmail1"
+                          placeholder="email@example.com" />
+                      </div>
+                      <div class="mb-3">
+                        <label
+                          for="exampleDropdownFormPassword1"
+                          class="form-label"
+                          >Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="exampleDropdownFormPassword1"
+                          placeholder="Password" />
+                      </div>
+                      <div class="mb-3">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="dropdownCheck" />
+                          <label class="form-check-label" for="dropdownCheck">
+                            Remember me
+                          </label>
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary">
+                        Sign in
+                      </button>
+                    </form>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab">
+                    <form class="row g-3 p-5">
+                      <div class="col-md-4">
+                        <label for="validationCustom07" class="form-label"
+                          >First name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationCustom07"
+                          placeholder="First Name"
+                          required />
+                        <div class="valid-feedback">Looks good!</div>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="validationCustom08" class="form-label"
+                          >Last name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationCustom08"
+                          placeholder="Last Name"
+                          required />
+                        <div class="valid-feedback">Looks good!</div>
+                      </div>
+                      <div class="col-md-4">
+                        <label
+                          for="validationCustomUsername7"
+                          class="form-label"
+                          >Username</label
+                        >
+                        <div class="input-group has-validation">
+                          <span class="input-group-text" id="inputGroupPrepend7"
+                            >@</span
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="validationCustomUsername7"
+                            aria-describedby="inputGroupPrepend"
+                            required />
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="exampleFormControlInput7" class="form-label"
+                          >Email address</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="exampleFormControlInput7"
+                          placeholder="name@example.com" />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputPassword7" class="form-label"
+                          >Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="inputPassword1" />
+                      </div>
+                      <div class="col-12">
+                        <label for="inputAddress1" class="form-label"
+                          >Address</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="inputAddress2"
+                          placeholder="1234 Main St" />
+                      </div>
+                      <div class="col-12">
+                        <label for="inputAddress2" class="form-label"
+                          >Address 2</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="inputAddress7"
+                          placeholder="Apartment, studio, or floor" />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputCity7" class="form-label">City</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="inputCity7" />
+                      </div>
+                      <div class="col-md-4">
+                        <label for="inputState7" class="form-label"
+                          >Country</label
+                        >
+                        <select id="inputState7" class="form-select">
+                          <option selected>Choose...</option>
+                          <option>...</option>
+                          <option>Lebanon</option>
+                          <option>France</option>
+                        </select>
+                      </div>
+                      <div class="col-md-2">
+                        <label for="inputZip7" class="form-label">Zip</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="inputZip7" />
+                      </div>
+
+                      <div class="col-12">
+                        <button type="submit" class="btn btn-primary">
+                          Sign up
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <li class="nav-item dropdown">
               <a
@@ -491,8 +718,19 @@
                 aria-expanded="false">
                 My Account
               </a>
+
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="SignUp.html">Sign in</a></li>
+                <li>
+                  <a
+                    id="signInLink"
+                    class="dropdown-item"
+                    href="#"
+                    id="navbarDropdown"
+                    aria-expanded="false">
+                    Sign in
+                  </a>
+                </li>
+
                 <li><a class="dropdown-item" href="#">Add coupons</a></li>
                 <li>
                   <hr class="dropdown-divider" />
@@ -504,10 +742,39 @@
             </li>
           </ul>
           <form class="d-flex">
+            <div class="dropdown">
+              <button
+                class="btn bg-transparent text-white dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Filter
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Romance</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Self help</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Thriller</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">...</a>
+                </li>
+              </ul>
+            </div>
             <input
               class="form-control me-2 border-2"
               type="search"
-              placeholder="Search"
+              placeholder="Book name, author, genres.."
               aria-label="Search" />
             <button class="btn btn-outline-primary me-2" type="submit">
               Search
@@ -620,10 +887,14 @@
                         class="card-img-top h-75"
                         alt="Hello Beautiful" />
                       <div class="card-body">
-                        <h5 class="card-title text-center text-capitalize">
+                        <h5
+                          class="card-title text-center text-capitalize text-decoration-underline">
                           Hello Beautiful
                         </h5>
-                        <p class="card-text text-danger text-center">70$</p>
+                        <p
+                          class="fs-4 card-text text-primary fw-bold text-center">
+                          20$
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -634,10 +905,14 @@
                         class="card-img-top h-75"
                         alt="Hell Bent" />
                       <div class="card-body">
-                        <h5 class="card-title text-center text-capitalize">
+                        <h5
+                          class="card-title text-center text-capitalize text-decoration-underline">
                           Hell Bent
                         </h5>
-                        <p class="card-text text-danger text-center">65$</p>
+                        <p
+                          class="fs-4 card-text text-primary fw-bold text-center">
+                          35$
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -648,10 +923,14 @@
                         class="card-img-top h-75"
                         alt="Yellow face" />
                       <div class="card-body">
-                        <h5 class="card-title text-center text-capitalize">
+                        <h5
+                          class="card-title text-decoration-underline text-center text-capitalize">
                           Yellow face
                         </h5>
-                        <p class="card-text text-center text-danger">58$</p>
+                        <p
+                          class="fs-4 card-text text-center text-primary fw-bold">
+                          38$
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -662,10 +941,14 @@
                         class="card-img-top h-75"
                         alt="Spare" />
                       <div class="card-body">
-                        <h5 class="card-title text-center text-capitalize">
+                        <h5
+                          class="text-decoration-underline card-title text-center text-capitalize">
                           Spare
                         </h5>
-                        <p class="card-text text-center text-danger">80$</p>
+                        <p
+                          class="fs-4 card-text text-center text-primary fw-bold">
+                          20$
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -680,10 +963,14 @@
                         class="card-img-top h-75"
                         alt="It starts with us" />
                       <div class="card-body">
-                        <h5 class="card-title text-center text-capitalize">
+                        <h5
+                          class="card-title text-center text-capitalize text-decoration-underline">
                           It starts with us
                         </h5>
-                        <p class="card-text text-danger text-center">50$</p>
+                        <p
+                          class="fs-4 card-text text-primary fw-bold text-center">
+                          20$
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -694,10 +981,14 @@
                         class="card-img-top h-75"
                         alt="Twisted Love" />
                       <div class="card-body">
-                        <h5 class="card-title text-center text-capitalize">
+                        <h5
+                          class="card-title text-center text-capitalize text-decoration-underline">
                           Twisted Love
                         </h5>
-                        <p class="card-text text-danger text-center">55$</p>
+                        <p
+                          class="fs-4 card-text text-primary fw-bold text-center">
+                          25$
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -708,10 +999,14 @@
                         class="card-img-top h-75"
                         alt="King of Wrath" />
                       <div class="card-body">
-                        <h5 class="card-title text-center text-capitalize">
+                        <h5
+                          class="card-title text-center text-capitalize text-decoration-underline">
                           King of wrath
                         </h5>
-                        <p class="card-text text-center text-danger">60$</p>
+                        <p
+                          class="fs-4 card-text text-center text-primary fw-bold">
+                          30$
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -722,10 +1017,14 @@
                         class="card-img-top h-75"
                         alt="Ignite Me" />
                       <div class="card-body">
-                        <h5 class="card-title text-center text-capitalize">
+                        <h5
+                          class="card-title text-center text-capitalize text-decoration-underline">
                           Ignite me
                         </h5>
-                        <p class="card-text text-center text-danger">47$</p>
+                        <p
+                          class="fs-4 card-text text-center text-primary fw-bold">
+                          27$
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -790,10 +1089,14 @@
                         class="card-img-top h-75"
                         alt="The 48 Laws of Power" />
                       <div class="card-body">
-                        <h5 class="card-title text-center text-capitalize">
+                        <h5
+                          class="card-title text-center text-capitalize text-break text-decoration-underline">
                           the 48 laws of power
                         </h5>
-                        <p class="card-text text-danger text-center">20$</p>
+                        <p
+                          class="fs-4 card-text text-primary fw-bold text-center">
+                          20$
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -804,10 +1107,14 @@
                         class="card-img-top h-75"
                         alt="The Mountain is you" />
                       <div class="card-body">
-                        <h5 class="card-title text-center text-capitalize">
+                        <h5
+                          class="card-title text-center text-capitalize text-decoration-underline">
                           The mountain is you
                         </h5>
-                        <p class="card-text text-danger text-center">30$</p>
+                        <p
+                          class="fs-4 card-text text-primary fw-bold text-center">
+                          30$
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -818,10 +1125,14 @@
                         class="card-img-top h-75"
                         alt="the seven husbdand of evelyn hugo" />
                       <div class="card-body">
-                        <h5 class="card-title text-center text-capitalize">
+                        <h5
+                          class="card-title text-center text-capitalize text-decoration-underline">
                           The seven husbands of evelyn hugo
                         </h5>
-                        <p class="card-text text-center text-danger">40$</p>
+                        <p
+                          class="fs-4 card-text text-center text-primary fw-bold">
+                          40$
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -864,21 +1175,223 @@
       </section>
 
       <!--Fourth Section-->
-      <section id="season" class="mt-5 shadow-lg">
-        <div class="container-lg">
-          <div class="text-center text-white">
-            <h2>Book Series</h2>
-            <p class="lead text-white">
-              "Explore interconnected worlds and stories that continue to unfold
-              across multiple volumes"
-            </p>
-          </div>
+
+      <div
+        id="carouselExampleIndicators6"
+        class="carousel slide"
+        data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators6"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators6"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
         </div>
-      </section>
+
+        <section id="season" class="mt-5 shadow-lg">
+          <div class="container-lg">
+            <div class="text-center text-white">
+              <h2>Book Series</h2>
+              <p class="lead text-white">
+                "Explore interconnected worlds and stories that continue to
+                unfold across multiple volumes"
+              </p>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row row-cols-8 row-cols-sm-3 row-cols-md-1 g-4">
+                  <div class="col">
+                    <div
+                      class="row my-5 g-0 align-items-center justify-content-center">
+                      <div class="col-8 col-lg-4 col-xl-3">
+                        <div class="card border-0">
+                          <div class="card-body text-center py-4">
+                            <h4 class="card-title">First Deal</h4>
+                            <p class="lead card-subtitle">3 books included</p>
+                            <img
+                              src="Images/shattermeseries1.png"
+                              alt="Starter Edition Image"
+                              style="max-width: 100%" />
+                            <p class="display-5 my-4 text-primary fw-bold">
+                              $30.99
+                            </p>
+                            <a
+                              href="#"
+                              class="btn btn-outline-primary btn-lg mt-3"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal2">
+                              Buy Now
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-9 col-lg-4">
+                        <div class="card border-primary border-2">
+                          <div class="card-header text-center text-primary">
+                            Most Popular
+                          </div>
+                          <div class="card-body text-center py-5">
+                            <h4 class="card-title">Complete Edition</h4>
+                            <p class="lead card-subtitle">all books included</p>
+                            <img
+                              src="Images/shattermeseries2.png"
+                              alt="Starter Edition Image"
+                              style="max-width: 100%" />
+                            <p class="display-4 my-4 text-primary fw-bold">
+                              $50.99
+                            </p>
+
+                            <a
+                              href="#"
+                              class="btn btn-outline-primary btn-lg mt-3"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal2">
+                              Buy Now
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-8 col-lg-4 col-xl-3">
+                        <div class="card border-0">
+                          <div class="card-body text-center py-4">
+                            <h4 class="card-title">Half-Half</h4>
+                            <p class="lead card-subtitle">
+                              choose 1st-half or 2nd-half
+                            </p>
+                            <img
+                              src="Images/shattermeseries3.png"
+                              alt="Starter Edition Image"
+                              style="max-width: 100%" />
+                            <p class="display-5 my-4 text-primary fw-bold">
+                              $35.99
+                            </p>
+
+                            <a
+                              href="#"
+                              class="btn btn-outline-primary btn-lg mt-3"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal2">
+                              Buy Now
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col">
+                  <div class="row row-cols-8 row-cols-sm-3 row-cols-md-1 g-4">
+                    <div class="col">
+                      <div
+                        class="row my-5 g-0 align-items-center justify-content-center">
+                        <div class="col-8 col-lg-4 col-xl-3">
+                          <div class="card border-0">
+                            <div class="card-body text-center py-4">
+                              <h4 class="card-title">Starter Edition</h4>
+                              <p class="lead card-subtitle">
+                                eBook download only
+                              </p>
+                              <p class="display-5 my-4 text-primary fw-bold">
+                                $12.99
+                              </p>
+
+                              <a
+                                href="#"
+                                class="btn btn-outline-primary btn-lg mt-3"
+                                data-bs-toggle="modal"
+                                data-bs-target="#exampleModal2">
+                                Buy Now
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-9 col-lg-4">
+                          <div class="card border-primary border-2">
+                            <div class="card-header text-center text-primary">
+                              Most Popular
+                            </div>
+                            <div class="card-body text-center py-5">
+                              <h4 class="card-title">Complete Edition</h4>
+                              <p class="lead card-subtitle">
+                                eBook download & all updates
+                              </p>
+                              <p class="display-4 my-4 text-primary fw-bold">
+                                $18.99
+                              </p>
+
+                              <a
+                                href="#"
+                                class="btn btn-outline-primary btn-lg mt-3"
+                                data-bs-toggle="modal"
+                                data-bs-target="#exampleModal2">
+                                Buy Now
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-8 col-lg-4 col-xl-3">
+                          <div class="card border-0">
+                            <div class="card-body text-center py-4">
+                              <h4 class="card-title">Ultimate Edition</h4>
+                              <p class="lead card-subtitle">
+                                download, updates & extras
+                              </p>
+                              <p class="display-5 my-4 text-primary fw-bold">
+                                $24.99
+                              </p>
+
+                              <a
+                                href="#"
+                                class="btn btn-outline-primary btn-lg mt-3"
+                                data-bs-toggle="modal"
+                                data-bs-target="#exampleModal2">
+                                Buy Now
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators6"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators6"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
       <!--More Sections-->
 
       <!--Footer-->
-      <footer class="footer mt-5 py-3 bg-transparent shadow-lg">
+      <footer class="footer sticky-bottom mt-5 py-3 bg-transparent shadow-lg">
         <div class="container mb-0 text-white text-start">
           <div class="row">
             <div class="col">
@@ -914,6 +1427,26 @@
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+      <script>
+        var tooltipTriggerList = [].slice.call(
+          document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        );
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+      </script>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var signInLink = document.getElementById("signInLink");
+          signInLink.addEventListener("click", function () {
+            var offcanvasElement = new bootstrap.Offcanvas(
+              document.getElementById("offcanvasTop")
+            );
+            offcanvasElement.toggle();
+          });
+        });
+      </script>
     </div>
   </body>
 </html>
